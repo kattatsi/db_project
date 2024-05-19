@@ -1,0 +1,100 @@
+-- Procedure: calories per portion
+
+DELIMITER //
+
+CREATE PROCEDURE IF NOT EXISTS calculate_calories_per_portion(IN recipeID INT)
+BEGIN
+    DECLARE total_calories INT;
+    DECLARE portions INT;
+
+    -- calculate total calories for a recipe
+    SELECT SUM(ri.ing_quantity_in_grams * i.calories_per_100g / 100)
+    INTO total_calories
+    FROM Recipe_has_Ingredients ri
+    JOIN Ingredients i ON ri.Ingredients_name = i.name
+    WHERE ri.Recipe_name = recipeID;
+
+    -- receive number of portions
+    SELECT portions
+    INTO portions
+    FROM Recipe
+    WHERE name = recipeID;
+
+    -- insert/update "calories_per_portion" in table "Nutrition_Info"
+    INSERT INTO Nutrition_Info (Recipe_name, calories_per_portion)
+    VALUES (recipeID, total_calories / portions)
+    ON DUPLICATE KEY UPDATE calories_per_portion = VALUES(calories_per_portion);
+END //
+
+DELIMITER ;
+
+
+-- Triggers
+-- for inserts/updates of an ingredient
+CREATE TRIGGER IF NOT EXISTS update_calories_per_portion_after_insert
+AFTER INSERT ON Recipe_has_Ingredients
+FOR EACH ROW
+BEGIN
+    CALL calculate_calories_per_portion(NEW.Recipe_name)
+END //
+
+DELIMITER ;
+
+CREATE TRIGGER IF NOT EXISTS update_calories_per_portion_after_update
+AFTER UPDATE ON Recipe_has_Ingredients
+FOR EACH ROW
+BEGIN
+    CALL calculate_calories_per_portion(NEW.Recipe_name)
+END //
+
+DELIMITER ;
+
+-- for inserts/updates of a recipe
+CREATE TRIGGER IF NOT EXISTS update_calories_on_recipe_insert
+AFTER INSERT ON Recipe
+FOR EACH ROW
+BEGIN
+    CALL calculate_calories_per_portion(NEW.Recipe_name)
+END //
+
+DELIMITER ;
+
+CREATE TRIGGER IF NOT EXISTS update_calories_on_recipe_update
+AFTER UPDATE ON Recipe
+FOR EACH ROW
+BEGIN
+    CALL calculate_calories_per_portion(NEW.Recipe_name)
+END //
+
+DELIMITER ;
+
+
+
+
+
+-- Trigger: Cook's age 
+
+-- for inserts
+DELIMITER //
+CREATE TRIGGER IF NOT EXISTS set_age_before_insert
+BEFORE INSERT ON cook
+FOR EACH ROW
+BEGIN
+    SET NEW.age = YEAR(CURDATE()) - YEAR(NEW.date_of_birth) - 
+                  (DATE_FORMAT(CURDATE(), '%m%d') < DATE_FORMAT(NEW.date_of_birth, '%m%d'));
+END //
+
+DELIMITER ;
+
+
+-- for updates
+DELIMITER //
+CREATE TRIGGER IF NOT EXISTS set_age_before_update
+BEFORE UPDATE ON cook
+FOR EACH ROW
+BEGIN
+    SET NEW.age = YEAR(CURDATE()) - YEAR(NEW.date_of_birth) - 
+                  (DATE_FORMAT(CURDATE(), '%m%d') < DATE_FORMAT(NEW.date_of_birth, '%m%d'));
+END //
+
+DELIMITER ;
