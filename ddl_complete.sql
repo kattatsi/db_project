@@ -130,9 +130,9 @@ ENGINE = InnoDB;
 -- Table `mydb`.`Meals`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Meals` (
-  `type` VARCHAR(50) NOT NULL,
+  `meal` VARCHAR(50) NOT NULL,
   `Recipe_name` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`type`, `Recipe_name`),
+  PRIMARY KEY (`meal`, `Recipe_name`),
   INDEX `fk_Meals_Recipe1_idx` (`Recipe_name` ASC) VISIBLE,
   CONSTRAINT `fk_Meals_Recipe1`
     FOREIGN KEY (`Recipe_name`)
