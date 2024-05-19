@@ -538,7 +538,7 @@ ENGINE = InnoDB;
 
 DELIMITER //
 
-CREATE PROCEDURE calculate_calories_per_portion(IN recipeID INT)
+CREATE PROCEDURE IF NOT EXISTS calculate_calories_per_portion(IN recipeID INT)
 BEGIN
     DECLARE total_calories INT;
     DECLARE portions INT;
@@ -567,7 +567,7 @@ DELIMITER ;
 
 -- Triggers
 -- for inserts/updates of an ingredient
-CREATE TRIGGER update_calories_per_portion_after_insert
+CREATE TRIGGER IF NOT EXISTS update_calories_per_portion_after_insert
 AFTER INSERT ON Recipe_has_Ingredients
 FOR EACH ROW
 BEGIN
@@ -576,7 +576,7 @@ END //
 
 DELIMITER ;
 
-CREATE TRIGGER update_calories_per_portion_after_update
+CREATE TRIGGER IF NOT EXISTS update_calories_per_portion_after_update
 AFTER UPDATE ON Recipe_has_Ingredients
 FOR EACH ROW
 BEGIN
@@ -586,7 +586,7 @@ END //
 DELIMITER ;
 
 -- for inserts/updates of a recipe
-CREATE TRIGGER update_calories_on_recipe_insert
+CREATE TRIGGER IF NOT EXISTS update_calories_on_recipe_insert
 AFTER INSERT ON Recipe
 FOR EACH ROW
 BEGIN
@@ -595,7 +595,7 @@ END //
 
 DELIMITER ;
 
-CREATE TRIGGER update_calories_on_recipe_update
+CREATE TRIGGER IF NOT EXISTS update_calories_on_recipe_update
 AFTER UPDATE ON Recipe
 FOR EACH ROW
 BEGIN
@@ -612,7 +612,7 @@ DELIMITER ;
 
 -- for inserts
 DELIMITER //
-CREATE TRIGGER set_age_before_insert
+CREATE TRIGGER IF NOT EXISTS set_age_before_insert
 BEFORE INSERT ON cook
 FOR EACH ROW
 BEGIN
@@ -625,7 +625,7 @@ DELIMITER ;
 
 -- for updates
 DELIMITER //
-CREATE TRIGGER set_age_before_update
+CREATE TRIGGER IF NOT EXISTS set_age_before_update
 BEFORE UPDATE ON cook
 FOR EACH ROW
 BEGIN
