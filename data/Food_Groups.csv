@@ -1,0 +1,13 @@
+fd_ing_name,fd_recipe_name,description,Image_id
+Condiments and Essential Oils,Flavor Enhanced,"Substances used to enhance the flavor of food, including spices and essential oils",7001
+"Coffee, Tea, and Their Products",Caffein beverages,"Beverages made from coffee and tea leaves, including related products",7002
+Preserved Foods,Preserved,Food items that have been processed and preserved to extend their shelf life,7003
+Sweetening Substances,Sweets,"Substances used to sweeten foods, including sugar and artificial sweeteners",7004
+Fats and Oils,Fat-Based,Edible fats and oils used in cooking and food preparation,7005
+"Milk, Eggs, and Their Products",Dairy or Egg-Based,"Dairy products and eggs, including milk, cheese, and egg-based products",7006
+Meat and Its Products,Meat-Based,"Animal flesh and products made from meat, including sausages and cured meats",7007
+Fish and Their Products,Seafood,Edible marine animals and products made from fish and seafood,7008
+Cereals and Their Products,Grain-Based,"Grains and products made from grains, such as bread, pasta, and rice",7009
+Various Plant-based Foods,Vegetarian,"Food items derived from plants, including fruits, vegetables, and legumes",7010
+Products with Sweetening Substances,Sweetened,"Food products that contain sweetening substances, including candies and desserts",7011
+Various Beverages,Other beverages,"Drinks consumed for refreshment or nutrition, including water, juice, and sodas",7012
