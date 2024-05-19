@@ -489,27 +489,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Recipe_has_Ingredients` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `mydb`.`Cook_has_Recipe`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Cook_has_Recipe` (
-  `Cook_cook_id` INT NOT NULL,
-  `Recipe_name` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`Cook_cook_id`, `Recipe_name`),
-  INDEX `fk_Cook_has_Recipe_Recipe1_idx` (`Recipe_name` ASC) VISIBLE,
-  INDEX `fk_Cook_has_Recipe_Cook1_idx` (`Cook_cook_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Cook_has_Recipe_Cook1`
-    FOREIGN KEY (`Cook_cook_id`)
-    REFERENCES `mydb`.`Cook` (`cook_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE,
-  CONSTRAINT `fk_Cook_has_Recipe_Recipe1`
-    FOREIGN KEY (`Recipe_name`)
-    REFERENCES `mydb`.`Recipe` (`name`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Recipe_has_Labels`
