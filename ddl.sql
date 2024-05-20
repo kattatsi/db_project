@@ -205,10 +205,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Nutrition_Info` (
   `Recipe_name` VARCHAR(100) NOT NULL,
-  `fat` INT NOT NULL,
-  `protein` INT NOT NULL,
-  `carbs` INT NOT NULL,
-  `calories_per_portion` INT NOT NULL,
+  `fat` INT DEFAULT 0,
+  `protein` INT DEFAULT 0,
+  `carbs` INT DEFAULT 0,
+  `calories_per_portion` INT DEFAULT 0,
   PRIMARY KEY (`Recipe_name`),
   INDEX `fk_Nutrition_Info_Recipe1_idx` (`Recipe_name` ASC) VISIBLE,
   CONSTRAINT `fk_Nutrition_Info_Recipe1`
@@ -248,8 +248,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Cook` (
   `date_of_birth` DATE NOT NULL,
   `age` INT NOT NULL,
   `years_of_experience` INT NOT NULL,
-  `position_rank` ENUM('Α΄ μάγειρας', 'Β΄ μάγειρας', 'Γ΄ μάγειρας', 'βοηθός
-αρχιμάγειρα', 'αρχιμάγειρας') NOT NULL,
+  `position_rank` ENUM('Α΄ μάγειρας', 'Β΄ μάγειρας', 'Γ΄ μάγειρας', 'βοηθός αρχιμάγειρα', 'αρχιμάγειρας') NOT NULL,
   `Image_id` INT NOT NULL,
   PRIMARY KEY (`cook_id`),
   INDEX `cook_name_index` (`cook_first_name` ASC, `cook_last_name` ASC) INVISIBLE,
@@ -541,11 +540,14 @@ ENGINE = InnoDB;
 
 
 
+
+
+
 -- Procedure: calories per portion
 
 DELIMITER //
 
-CREATE PROCEDURE IF NOT EXISTS calculate_calories_per_portion(IN recipeID INT)
+CREATE PROCEDURE IF NOT EXISTS calculate_calories_per_portion(IN Name VARCHAR(100))
 BEGIN
     DECLARE total_calories INT;
     DECLARE portions INT;
@@ -555,61 +557,93 @@ BEGIN
     INTO total_calories
     FROM Recipe_has_Ingredients ri
     JOIN Ingredients i ON ri.Ingredients_name = i.name
-    WHERE ri.Recipe_name = recipeID;
+    WHERE ri.Recipe_name = Name;
 
     -- receive number of portions
-    SELECT portions
+    SELECT r.portions
     INTO portions
-    FROM Recipe
-    WHERE name = recipeID;
+    FROM Recipe r
+    WHERE r.name = Name;
 
-    -- insert/update "calories_per_portion" in table "Nutrition_Info"
+    
+	
+	-- update "calories_per_portion" in table "Nutrition_Info"
+    UPDATE Nutrition_Info
+    SET calories_per_portion = total_calories / portions
+    WHERE Recipe_name = name;
+	
+	
     INSERT INTO Nutrition_Info (Recipe_name, calories_per_portion)
-    VALUES (recipeID, total_calories / portions)
-    ON DUPLICATE KEY UPDATE calories_per_portion = VALUES(calories_per_portion);
+    VALUES (Name, total_calories / portions)
+	ON DUPLICATE KEY UPDATE calories_per_portion = VALUES(calories_per_portion);
+    
+	
 END //
 
 DELIMITER ;
 
 
+
 -- Triggers
--- for inserts/updates of an ingredient
+
+-- for inserts/updates/deletes of an ingredient
+DELIMITER //
+
 CREATE TRIGGER IF NOT EXISTS update_calories_per_portion_after_insert
 AFTER INSERT ON Recipe_has_Ingredients
 FOR EACH ROW
 BEGIN
-    CALL calculate_calories_per_portion(NEW.Recipe_name)
+    CALL calculate_calories_per_portion(NEW.Recipe_name);
 END //
 
-DELIMITER ;
 
 CREATE TRIGGER IF NOT EXISTS update_calories_per_portion_after_update
 AFTER UPDATE ON Recipe_has_Ingredients
 FOR EACH ROW
 BEGIN
-    CALL calculate_calories_per_portion(NEW.Recipe_name)
+    CALL calculate_calories_per_portion(NEW.Recipe_name);
+END //
+
+
+CREATE TRIGGER IF NOT EXISTS update_calories_per_portion_after_delete
+AFTER DELETE ON Recipe_has_Ingredients
+FOR EACH ROW
+BEGIN
+    CALL calculate_calories_per_portion(OLD.Recipe_name);
 END //
 
 DELIMITER ;
 
--- for inserts/updates of a recipe
+
+-- for inserts/updates/deletes of a recipe
+DELIMITER //
+
 CREATE TRIGGER IF NOT EXISTS update_calories_on_recipe_insert
 AFTER INSERT ON Recipe
 FOR EACH ROW
 BEGIN
-    CALL calculate_calories_per_portion(NEW.Recipe_name)
+    CALL calculate_calories_per_portion(NEW.name);
 END //
 
-DELIMITER ;
 
 CREATE TRIGGER IF NOT EXISTS update_calories_on_recipe_update
 AFTER UPDATE ON Recipe
 FOR EACH ROW
 BEGIN
-    CALL calculate_calories_per_portion(NEW.Recipe_name)
+    CALL calculate_calories_per_portion(NEW.name);
+END //
+
+
+CREATE TRIGGER IF NOT EXISTS update_calories_on_recipe_delete
+AFTER DELETE ON Recipe
+FOR EACH ROW
+BEGIN
+    DELETE FROM Nutrition_Info WHERE Recipe_name = OLD.name;
 END //
 
 DELIMITER ;
+
+
 
 
 
@@ -644,7 +678,14 @@ DROP PROCEDURE IF EXISTS setup_episode;
 
 DELIMITER ;
 
---  Create a table to store the selection history
+
+
+
+
+
+-- Random Selection
+
+-- Create a table to store the selection history
 CREATE TABLE IF NOT EXISTS `mydb`.`Episode_Selections` (
     `episode_id` INT NOT NULL,
     `cuisine` VARCHAR(100) NOT NULL,
@@ -675,7 +716,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Episode_Selections` (
 -- Create the stored procedure for random selection
 DELIMITER //
 
-CREATE PROCEDURE `select_episode_participants`(IN episodeID INT)
+CREATE PROCEDURE IF NOT EXISTS `select_episode_participants`(IN episodeID INT)
 BEGIN
     DECLARE done INT DEFAULT 0;
     DECLARE cuisine VARCHAR(100);
@@ -737,7 +778,7 @@ DELIMITER ;
 -- see if there is  no consecutive participation for more than 3 episodes
 DELIMITER //
 
-CREATE PROCEDURE `check_participation_constraints`(IN episodeID INT)
+CREATE PROCEDURE IF NOT EXISTS `check_participation_constraints`(IN episodeID INT)
 BEGIN
     -- Ensure no cook participates in more than 3 consecutive episodes
     DELETE FROM Episode_Selections
@@ -797,7 +838,7 @@ DELIMITER ;
 -- Final stored procedure to manage the entire selection and validation process
 DELIMITER //
 
-CREATE PROCEDURE setup_episode(IN episodeID INT)
+CREATE PROCEDURE IF NOT EXISTS setup_episode(IN episodeID INT)
 BEGIN
 -- Step 1: Select random participants
 CALL select_episode_participants(episodeID);
