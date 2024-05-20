@@ -1,4 +1,4 @@
-name,description,difficulty,prep_time,cooking_time,recipe_type,Nasional_Cuisine,portions,Image_id,Ingredients_name
+name,description,difficulty,prep_time,cooking_time,recipe_type,National_Cuisine,portions,Image_id,Ingredients_name
 Miso-Butter Roast Chicken With Acorn Squash Panzanella,"A savory roast chicken glazed with miso-butter, served alongside a hearty bread salad featuring roasted acorn squash.",2,30,30,cooking,Japanese,4,1001,chicken
 Crispy Salt and Pepper Potatoes,"Golden, crispy potatoes seasoned simply with salt and pepper, perfect as a side dish.",3,45,45,cooking,American,5,1002,potatoes
 Thanksgiving Mac and Cheese,"Creamy, rich macaroni and cheese with a hint of holiday spices, ideal for festive gatherings.",5,20,50,cooking,American,3,1003,elbow macaroni
