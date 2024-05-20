@@ -248,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Cook` (
   `date_of_birth` DATE NOT NULL,
   `age` INT NOT NULL,
   `years_of_experience` INT NOT NULL,
-  `position_rank` ENUM('Α΄ μάγειρας', 'Β΄ μάγειρας', 'Γ΄ μάγειρας', 'βοηθός αρχιμάγειρα', 'αρχιμάγειρας') NOT NULL,
+  `position_rank` ENUM('First cook', 'Second cook', 'Third cook', 'Sous chef', 'Head chef') NOT NULL,
   `Image_id` INT NOT NULL,
   PRIMARY KEY (`cook_id`),
   INDEX `cook_name_index` (`cook_first_name` ASC, `cook_last_name` ASC) INVISIBLE,
