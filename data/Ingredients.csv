@@ -1,4 +1,4 @@
-name,calories_per_100,Image_id,Food_Groups_fd_recipe_name
+name,calories_per_100g,Image_id,Food_Groups_fd_recipe_name
 chicken,62,3001,Meat-Based
 salt,75,3002,Flavor Enhanced
 rosemary,41,3003,Flavor Enhanced
