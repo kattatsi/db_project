@@ -4,189 +4,165 @@ salt,75,3002,Flavor Enhanced
 rosemary,41,3003,Flavor Enhanced
 unsalted butter,80,3004,Fat-Based
 red pepper flakes,20,3005,Flavor Enhanced
-black pepper,60,3006,Flavor Enhanced
-apples,32,3007,Vegetarian
-extra-virgin olive oil,44,3008,Fat-Based
-white onions,58,3009,Vegetarian
-apple cider vinegar,43,3010,Flavor Enhanced
-white miso,25,3011,Vegetarian
-all-purpose flour,36,3012,Grain-Based
-dry white wine,9,3013,Other beverages
-unsalted chicken broth,85,3014,Meat-Based
-egg whites,23,3015,Dairy or Egg-Based
-potatoes,42,3016,Vegetarian
-thyme,13,3017,Flavor Enhanced
-whole milk,34,3018,Dairy or Egg-Based
-garlic powder,56,3019,Flavor Enhanced
-paprika,87,3020,Flavor Enhanced
-cheddar,94,3021,Dairy or Egg-Based
-cream cheese,34,3022,Dairy or Egg-Based
-elbow macaroni,23,3023,Grain-Based
-round Italian loaf,45,3024,Grain-Based
-Italian sausage,65,3025,Meat-Based
-celery,30,3026,Vegetarian
-garlic cloves,32,3027,Vegetarian
-eggs,45,3028,Dairy or Egg-Based
-heavy cream,32,3029,Dairy or Egg-Based
-parsley,64,3030,Vegetarian
-brown sugar,54,3031,Sweets
-water,34,3032,Other beverages
-bourbon,26,3033,Other beverages
-lemon juice,28,3034,Other beverages
-apple butter,30,3035,Vegetarian
-cinnamon,45,3036,Flavor Enhanced
-tequila,50,3037,Other beverages
-Grand Marnier,35,3038,Other beverages
-Amaro Averna,36,3039,Other beverages
-salted butter,50,3040,Fat-Based
-pink peppercorns,70,3041,Flavor Enhanced
-white sugar,76,3042,Sweets
-turmeric,37,3043,Flavor Enhanced
-gin,58,3044,Other beverages
-white jasmine rice,84,3045,Grain-Based
-pearl barley,32,3046,Grain-Based
-lamb stew meat,45,3047,Meat-Based
-ginger,65,3048,Flavor Enhanced
-shallots,60,3049,Vegetarian
-vegetable oil,46,3050,Fat-Based
-cilantro,60,3051,Vegetarian
-cumin,67,3052,Flavor Enhanced
-tomato paste,54,3053,Vegetarian
-cumin seeds,34,3054,Flavor Enhanced
-evaporated milk,68,3055,Dairy or Egg-Based
-cheddar,56,3056,Dairy or Egg-Based
-mayonnaise,43,3057,Dairy or Egg-Based
-pimento peppers,37,3058,Vegetarian
-ham,28,3059,Meat-Based
-carrots,59,3060,Vegetarian
-maple syrup,46,3061,Sweetened
-apple juice,54,3062,Other beverages
-mustard,43,3063,Flavor Enhanced
-salt,54,3064,Flavor Enhanced
-bacon,65,3065,Meat-Based
-carrot,67,3066,Vegetarian
-apples,56,3067,Vegetarian
-butternut squash,45,3068,Vegetarian
-chicken stock,34,3069,Meat-Based
-sour cream,32,3070,Dairy or Egg-Based
-lemons,37,3071,Vegetarian
-bread,87,3072,Grain-Based
-lettuce,56,3073,Vegetarian
-chicken thighs,54,3074,Meat-Based
-leeks,78,3075,Vegetarian
-white rice,34,3076,Grain-Based
-chicken broth,62,3077,Meat-Based
-shrimp,75,3078,Seafood
-corn tortillas,48,3079,Grain-Based
-black beans,59,3080,Vegetarian
-coconut oil,42,3081,Fat-Based
-coconut milk,34,3082,Vegetarian
-mangoes,52,3083,Vegetarian
-nuts,31,3084,Vegetarian
-chicken,46,3085,Meat-Based
-nutmeg,71,3086,Flavor Enhanced
-lemon,67,3087,Vegetarian
-orange,58,3088,Vegetarian
-ginger,97,3089,Flavor Enhanced
-lime juice,23,3090,Other beverages
-beets,34,3091,Vegetarian
-white wine vinegar,56,3092,Flavor Enhanced
-cashews,76,3093,Vegetarian
-kale,56,3094,Vegetarian
-clove garlic,45,3095,Flavor Enhanced
-chickpeas,67,3096,Vegetarian
-coriander,87,3097,Flavor Enhanced
-pumpkin,98,3098,Vegetarian
-greek yogurt,76,3099,Dairy or Egg-Based
-honey,56,3100,Sweets
-red chiles,45,3101,Vegetarian
-quinoa,34,3102,Grain-Based
-tahini,27,3103,Sweets
-sugar,28,3104,Sweets
-roasted cashews,20,3105,Vegetarian
-golden raisins,23,3106,Vegetarian
-whipped cream,34,3107,Fat-Based
-milk,25,3108,Dairy or Egg-Based
-tomatoes,26,3109,Vegetarian
-spinach,47,3110,Vegetarian
-turkey,58,3111,Meat-Based
-smoked paprika,69,3112,Flavor Enhanced
-red wine vinegar,56,3113,Flavor Enhanced
-soy sauce,76,3114,Flavor Enhanced
-squash,56,3115,Seafood
-vegetable broth,78,3116,Vegetarian
-broccolini,45,3117,Vegetarian
-ramen noodles,65,3118,Grain-Based
-coconut milk,43,3119,Vegetarian
-eggplants,50,3120,Vegetarian
-tomato,80,3121,Vegetarian
-black pepper,90,3122,Flavor Enhanced
-red hot chili pepper,56,3123,Flavor Enhanced
-curry,76,3124,Flavor Enhanced
-chicken stock,54,3125,Meat-Based
-curry,45,3126,Flavor Enhanced
-cloves,76,3127,Flavor Enhanced
-celery,87,3128,Vegetarian
-red bell pepper,54,3129,Vegetarian
-green bell pepper,34,3130,Vegetarian
-shrimp,56,3131,Seafood
-cilantro,76,3132,Vegetarian
-oregano,54,3133,Flavor Enhanced
-peas,32,3134,Vegetarian
-scallions,32,3135,Vegetarian
-thyme,34,3136,Flavor Enhanced
-Cynar,45,3137,Other beverages
-Fino sherry,30,3138,Other beverages
-Orange twist,79,3139,Flavor Enhanced
-graham cracker,58,3140,Grain-Based
-cardamom,56,3141,Flavor Enhanced
-vanilla extract,43,3142,Sweetened
-buttermilk,36,3143,Dairy or Egg-Based
-baking powder,37,3144,Grain-Based
-cayenne,24,3145,Flavor Enhanced
-white vinegar,25,3146,Flavor Enhanced
-cinnamon stick,29,3147,Flavor Enhanced
-cold-brew coffee,41,3148,Caffein beverages
-pumpkin purée,52,3149,Vegetarian
-powdered sugar,63,3150,Sweets
-bread,43,3151,Grain-Based
-salmon,23,3152,Seafood
-tortilla wraps,54,3153,Seafood
-instant yeast,76,3154,Grain-Based
-bread flour,87,3155,Grain-Based
-pork butt,65,3156,Meat-Based
-vegetable stock,65,3157,Vegetarian
-green cabbage,43,3158,Vegetarian
-beans,45,3159,Vegetarian
-green pepper,67,3160,Flavor Enhanced
-papaya,89,3161,Vegetarian
-sweet potatoes,78,3162,Vegetarian
-chile powder,65,3163,Flavor Enhanced
-rum,43,3164,Other beverages
-dried chile powder,5,3165,Flavor Enhanced
-leek,67,3166,Vegetarian
-green beans,56,3167,Vegetarian
-lemon,45,3168,Vegetarian
-cherry tomatoes,34,3169,Vegetarian
-feta,78,3170,Dairy or Egg-Based
-corn,30,3171,Vegetarian
-lime,64,3172,Vegetarian
-large eggs,27,3173,Dairy or Egg-Based
-Parmesan,48,3174,Dairy or Egg-Based
-shallot,59,3175,Vegetarian
-coriander,45,3176,Flavor Enhanced
-cumin,32,3177,Flavor Enhanced
-cherry tomatoess,42,3178,Vegetarian
-mint leaves,53,3179,Flavor Enhanced
-white rice,64,3180,Grain-Based
-cucumbers,75,3181,Vegetarian
-sesame seeds,83,3182,Grain-Based
-soy sauce,65,3183,Flavor Enhanced
-romaine lettuce,45,3184,Vegetarian
-lime,30,3185,Vegetarian
-rice vinegar,46,3186,Flavor Enhanced
-vegetable oil,32,3187,Fat-Based
-raisins,36,3188,Vegetarian
-lamb,60,3189,Meat-Based
-pasta,54,3190,Grain-Based
-cod,73,3191,Seafood
+apples,32,3006,Vegetarian
+extra-virgin olive oil,44,3007,Fat-Based
+white onions,58,3008,Vegetarian
+apple cider vinegar,43,3009,Flavor Enhanced
+white miso,25,3010,Vegetarian
+all-purpose flour,36,3011,Grain-Based
+dry white wine,9,3012,Other beverages
+unsalted chicken broth,85,3013,Meat-Based
+egg whites,23,3014,Dairy or Egg-Based
+potatoes,42,3015,Vegetarian
+whole milk,34,3016,Dairy or Egg-Based
+garlic powder,56,3017,Flavor Enhanced
+paprika,87,3018,Flavor Enhanced
+cheddar,94,3019,Dairy or Egg-Based
+cream cheese,34,3020,Dairy or Egg-Based
+elbow macaroni,23,3021,Grain-Based
+round Italian loaf,45,3022,Grain-Based
+Italian sausage,65,3023,Meat-Based
+garlic cloves,32,3024,Vegetarian
+eggs,45,3025,Dairy or Egg-Based
+heavy cream,32,3026,Dairy or Egg-Based
+parsley,64,3027,Vegetarian
+brown sugar,54,3028,Sweets
+water,34,3029,Other beverages
+bourbon,26,3030,Other beverages
+lemon juice,28,3031,Other beverages
+apple butter,30,3032,Vegetarian
+cinnamon,45,3033,Flavor Enhanced
+tequila,50,3034,Other beverages
+Grand Marnier,35,3035,Other beverages
+Amaro Averna,36,3036,Other beverages
+salted butter,50,3037,Fat-Based
+pink peppercorns,70,3038,Flavor Enhanced
+white sugar,76,3039,Sweets
+turmeric,37,3040,Flavor Enhanced
+gin,58,3041,Other beverages
+white jasmine rice,84,3042,Grain-Based
+pearl barley,32,3043,Grain-Based
+lamb stew meat,45,3044,Meat-Based
+shallots,60,3045,Vegetarian
+vegetable oil,46,3046,Fat-Based
+tomato paste,54,3047,Vegetarian
+cumin seeds,34,3048,Flavor Enhanced
+evaporated milk,68,3049,Dairy or Egg-Based
+mayonnaise,43,3050,Dairy or Egg-Based
+pimento peppers,37,3051,Vegetarian
+ham,28,3052,Meat-Based
+maple syrup,46,3053,Sweetened
+apple juice,54,3054,Other beverages
+mustard,43,3055,Flavor Enhanced
+bacon,65,3056,Meat-Based
+carrot,67,3057,Vegetarian
+butternut squash,45,3058,Vegetarian
+sour cream,32,3059,Dairy or Egg-Based
+lettuce,56,3060,Vegetarian
+chicken thighs,54,3061,Meat-Based
+leeks,78,3062,Vegetarian
+chicken broth,62,3063,Meat-Based
+corn tortillas,48,3064,Grain-Based
+black beans,59,3065,Vegetarian
+coconut oil,42,3066,Fat-Based
+mangoes,52,3067,Vegetarian
+nuts,31,3068,Vegetarian
+nutmeg,71,3069,Flavor Enhanced
+lemon,67,3070,Vegetarian
+orange,58,3071,Vegetarian
+ginger,97,3072,Flavor Enhanced
+lime juice,23,3073,Other beverages
+beets,34,3074,Vegetarian
+white wine vinegar,56,3075,Flavor Enhanced
+cashews,76,3076,Vegetarian
+kale,56,3077,Vegetarian
+clove garlic,45,3078,Flavor Enhanced
+chickpeas,67,3079,Vegetarian
+pumpkin,98,3080,Vegetarian
+greek yogurt,76,3081,Dairy or Egg-Based
+honey,56,3082,Sweets
+red chiles,45,3083,Vegetarian
+quinoa,34,3084,Grain-Based
+tahini,27,3085,Sweets
+sugar,28,3086,Sweets
+roasted cashews,20,3087,Vegetarian
+golden raisins,23,3088,Vegetarian
+whipped cream,34,3089,Fat-Based
+milk,25,3090,Dairy or Egg-Based
+tomatoes,26,3091,Vegetarian
+spinach,47,3092,Vegetarian
+turkey,58,3093,Meat-Based
+smoked paprika,69,3094,Flavor Enhanced
+red wine vinegar,56,3095,Flavor Enhanced
+squash,56,3096,Seafood
+vegetable broth,78,3097,Vegetarian
+broccolini,45,3098,Vegetarian
+ramen noodles,65,3099,Grain-Based
+coconut milk,43,3100,Vegetarian
+eggplants,50,3101,Vegetarian
+tomato,80,3102,Vegetarian
+black pepper,90,3103,Flavor Enhanced
+red hot chili pepper,56,3104,Flavor Enhanced
+curry,76,3105,Flavor Enhanced
+chicken stock,54,3106,Meat-Based
+cloves,76,3107,Flavor Enhanced
+celery,87,3108,Vegetarian
+red bell pepper,54,3109,Vegetarian
+green bell pepper,34,3110,Vegetarian
+shrimp,56,3111,Seafood
+cilantro,76,3112,Vegetarian
+oregano,54,3113,Flavor Enhanced
+peas,32,3114,Vegetarian
+scallions,32,3115,Vegetarian
+thyme,34,3116,Flavor Enhanced
+Cynar,45,3117,Other beverages
+Fino sherry,30,3118,Other beverages
+Orange twist,79,3119,Flavor Enhanced
+graham cracker,58,3120,Grain-Based
+cardamom,56,3121,Flavor Enhanced
+vanilla extract,43,3122,Sweetened
+buttermilk,36,3123,Dairy or Egg-Based
+baking powder,37,3124,Grain-Based
+cayenne,24,3125,Flavor Enhanced
+white vinegar,25,3126,Flavor Enhanced
+cinnamon stick,29,3127,Flavor Enhanced
+cold-brew coffee,41,3128,Caffein beverages
+pumpkin purée,52,3129,Vegetarian
+powdered sugar,63,3130,Sweets
+bread,43,3131,Grain-Based
+salmon,23,3132,Seafood
+tortilla wraps,54,3133,Seafood
+instant yeast,76,3134,Grain-Based
+bread flour,87,3135,Grain-Based
+pork butt,65,3136,Meat-Based
+vegetable stock,65,3137,Vegetarian
+green cabbage,43,3138,Vegetarian
+beans,45,3139,Vegetarian
+green pepper,67,3140,Flavor Enhanced
+papaya,89,3141,Vegetarian
+sweet potatoes,78,3142,Vegetarian
+chile powder,65,3143,Flavor Enhanced
+rum,43,3144,Other beverages
+dried chile powder,5,3145,Flavor Enhanced
+leek,67,3146,Vegetarian
+green beans,56,3147,Vegetarian
+cherry tomatoes,34,3148,Vegetarian
+feta,78,3149,Dairy or Egg-Based
+corn,30,3150,Vegetarian
+large eggs,27,3151,Dairy or Egg-Based
+Parmesan,48,3152,Dairy or Egg-Based
+shallot,59,3153,Vegetarian
+coriander,45,3154,Flavor Enhanced
+cumin,32,3155,Flavor Enhanced
+mint leaves,53,3156,Flavor Enhanced
+white rice,64,3157,Grain-Based
+cucumbers,75,3158,Vegetarian
+sesame seeds,83,3159,Grain-Based
+soy sauce,65,3160,Flavor Enhanced
+romaine lettuce,45,3161,Vegetarian
+lime,30,3162,Vegetarian
+rice vinegar,46,3163,Flavor Enhanced
+raisins,36,3164,Vegetarian
+lamb,60,3165,Meat-Based
+pasta,54,3166,Grain-Based
+cod,73,3167,Seafood
