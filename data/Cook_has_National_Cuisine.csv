@@ -1,7 +1,7 @@
 Cook_cook_id,National_Cuisine_cuisine
 1,French
 1,Mexican
-1,French
+1,Italian
 2,Armenian
 2,Korean
 3,Armenian
@@ -81,8 +81,8 @@ Cook_cook_id,National_Cuisine_cuisine
 27,American
 28,Albanian
 28,Vietnamese
+29,Spanish
 29,American
-29,French
 29,French
 29,Indian
 30,American
@@ -163,7 +163,7 @@ Cook_cook_id,National_Cuisine_cuisine
 57,Armenian
 57,Canadian
 57,Japanese
-58,French
+58,Japanese
 58,Greek
 58,Italian
 58,French
